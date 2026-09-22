@@ -1,8 +1,8 @@
-@import url(css/components/root.css);
-@import url(css/components/loader.css);
-@import url(css/components/search.css);
-@import url(css/components/lang.css);
-@import url(css/components/utility.css);
+@import url(/css/components/root.css);
+@import url(/css/components/loader.css);
+@import url(/css/components/search.css);
+@import url(/css/components/lang.css);
+@import url(/css/components/utility.css);
 
 @property --gradient-start {
   syntax: "<color>";
