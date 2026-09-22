@@ -1,23 +1,21 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const includeElements = document.querySelectorAll("[data-include]");
+const includeElements = document.querySelectorAll("[data-include]");
 
-  await Promise.all(
+await Promise.all(
     [...includeElements].map(async (element) => {
-      const file = element.dataset.include;
+        const file = element.dataset.include;
 
-      try {
-        const response = await fetch(file);
+        try {
+            const response = await fetch(file);
 
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}: ${file}`);
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${file}`);
+            }
+
+            element.innerHTML = await response.text();
+        } catch (error) {
+            console.error("Include error:", error);
         }
-
-        element.innerHTML = await response.text();
-      } catch (error) {
-        console.error(error);
-      }
     })
-  );
+);
 
-  document.dispatchEvent(new Event("includesLoaded"));
-});
+document.dispatchEvent(new Event("includesLoaded"));
