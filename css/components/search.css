@@ -1,0 +1,123 @@
+.block_search_lang {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+
+.search-box {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+
+  position: relative;
+  border: none;
+  border-radius: 999px;
+  font-family: var(--montserrat);
+  background: var(--white);
+  box-sizing: border-box;
+  line-height: 2;
+
+  isolation: isolate;
+}
+
+.search-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+
+  border-radius: inherit;
+
+  background: linear-gradient(90deg, #4162f7, #c847b0);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+  transition: all 0.3s ease-in;
+}
+
+.search-box:focus-within {
+  background: #fff;
+  transition: all 0.3s ease-out;
+}
+
+.search-box input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  font-family: var(--montserrat);
+  font-size: 1rem;
+  color: #949494;
+  background: var(--white);
+  line-height: 2;
+  min-width: 0;
+}
+
+.search-box input::placeholder {
+  color: #9f9f9f;
+  opacity: 1;
+  line-height: 1.5625;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  font-family: var(--montserrat);
+}
+
+/* Search button */
+.search-box button {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Search icon */
+.search-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: #9f9f9f;
+  stroke-width: 2;
+  stroke-linecap: round;
+  transition: stroke 0.2s ease;
+}
+
+/* Hover */
+.search-box button:hover .search-icon {
+  stroke: linear-gradient(90.04deg, #4162f7 0.04%, #c847b0 79.98%);
+}
+
+/* Focus */
+.search-box:focus-within {
+  border-color: linear-gradient(90.04deg, #4162f7 0.04%, #c847b0 79.98%);
+  box-shadow: 0 0 0 2px rgba(198, 91, 181, 0.12);
+}
+
+.search-box input:focus {
+  outline: none;
+}
+
+/* Keyboard focus */
+.search-box button:focus-visible {
+  outline: 2px solid linear-gradient(90.04deg, #4162f7 0.04%, #c847b0 79.98%);
+  outline-offset: 2px;
+  border-radius: 50%;
+}
