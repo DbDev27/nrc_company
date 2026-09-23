@@ -3,6 +3,7 @@
 @import url("./assets/css/components/bar.css");
 @import url("./assets/css/components/lang.css");
 @import url("./assets/css/components/utility.css");
+@import url("./sections/footer.css");
 
 @property --gradient-start {
   syntax: "<color>";
