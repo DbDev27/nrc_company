@@ -1,5 +1,6 @@
 // MARQUEE
 document.addEventListener("includesLoaded", () => {
+
     document.querySelectorAll(".marquee").forEach((marquee) => {
         const track = marquee.querySelector(".marquee__track");
         const original = track?.querySelector(".marquee__group");
@@ -36,3 +37,4 @@ document.addEventListener("includesLoaded", () => {
         requestAnimationFrame(animate);
     });
 });
+document.addEventListener("includesLoaded", initLanguageSelect);
