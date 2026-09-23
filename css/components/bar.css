@@ -34,11 +34,11 @@
 
   background: linear-gradient(90deg, #4162f7, #c847b0);
 
-  /* -webkit-mask:
+  -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
 
-  -webkit-mask-composite: xor; */
+  -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
   z-index: -1;
