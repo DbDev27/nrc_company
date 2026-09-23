@@ -287,67 +287,11 @@
       </div>
     </header>
 
-    <section class="hero">
-      <div class="hero-inner-wrap">
-        <div class="hero-headline-wrapper">
-          <div class="hero-headline-block">
-            <h2>未来を、デザインする。</h2>
-            <h1>株式会社ライトコア</h1>
-            <p>
-              私たちは、デザインとテクノロジーの力でビジネスの可能性を広げ、クライアントと共に、<br />
-              より良い未来を創造し続けます。
-            </p>
-          </div>
-          <div class="headline-content-ln">
-            <p class="linear-1">Creative / 企画</p>
-            <img src="./img/common/linear-bullet.svg" alt="bullet" width="10" />
-            <p class="linear-1">Design / デザイン</p>
-            <img src="./img/common/linear-bullet.svg" alt="bullet" width="10" />
-            <p class="linear-1">Media / 運用</p>
-            <img src="./img/common/linear-bullet.svg" alt="bullet" width="10" />
-            <p class="linear-1">Global / グローバル</p>
-          </div>
-        </div>
-        <div class="main-mv-image">
-          <img src="./img/top/mv-img.png" alt="img" width="1140" />
-        </div>
-      </div>
-    </section>
+    <div data-include="./sections/MV.html"></div>
 
     <main>
-      <div class="marquee" data-speed="1">
-        <div class="marquee__track">
-          <div class="marquee__group">
-            <h1>INNOVATION</h1>
-            <h1>●</h1>
-            <h1>quality</h1>
-            <h1>●</h1>
-            <h1>trust</h1>
-            <h1>●</h1>
-            <h1>growth</h1>
-            <h1>●</h1>
-            <h1>technology</h1>
-            <h1>●</h1>
-          </div>
-        </div>
-      </div>
-
-      <section class="grid-section">
-        <div class="grid-lines"></div>
-        <div class="about-wrapper">
-          <div class="about-inner-wrap">
-            <div class="about-left-block">
-              <div class="Headline--v1">
-                <p class="montserrat">About</p>
-                <div class="block-linear">
-                  <h1 class="noto-sans linear-text">私たちについて</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid-lines"></div>
-      </section>
+      <div data-include="./sections/marquee.html"></div>
+      <div data-include="./sections/about.html"></div>
     </main>
     <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
 
@@ -402,8 +346,7 @@
       });
     </script>
 
-    <script src="./js/lang.js"></script>
-    <script type="module" src="./js/include.js"></script>
-    <!-- <script src="./js/include.js"></script> -->
+    <script src="./js/components/lang.js"></script>
+    <script type="module" src="./js/core/include.js"></script>
   </body>
 </html>
